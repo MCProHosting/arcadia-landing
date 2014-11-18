@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'InfiniteJustice';
+  src: url('../font/InfiniteJustice.eot?#iefix') format('embedded-opentype'),  url('../font/InfiniteJustice.woff') format('woff'), url('../font/InfiniteJustice.ttf')  format('truetype'), url('../font/InfiniteJustice.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'InfiniteJustice';
+}
+
+#video {
+    position: fixed;
+    z-index: -1;
+}
+
+#video:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(110, 200, 195, 0.75);
+}
+
+#video video {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#container {
+    position: fixed;
+    top: 50%;
+    margin-top: -78px;
+    left: 0;
+    right: 0;
+
+    background: #6ec8c3;
+    font-size: 48px;
+    text-shadow: 1.5px 1.5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    line-height: 170px;
+}
+
+#container:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -150px;
+    height: 306px;
+    width: 301px;
+    background: url('../img/logo.png');
+}
+
+.box {
+    float: left;
+    width: 50%;
+}
+
+.box:first-child {
+    padding-right: 215px;
+}
+
+.box:last-child {
+    padding-left: 215px;
+}

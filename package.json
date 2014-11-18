@@ -1,0 +1,27 @@
+{
+  "name": "gulp-breakout",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.8.8",
+    "glob": "^4.0.6",
+    "gulp-if": "^1.2.5",
+    "gulp-load-plugins": "^0.7.0",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-uglify": "^1.0.1",
+    "gulp-htmlmin": "^0.2.0",
+    "gulp-imagemin": "^1.1.0",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-concat": "^2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/connor4312/gulp-breakout"
+  },
+  "author": "Connor Peet <connor@connorpeet.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/connor4312/gulp-breakout/issues"
+  }
+}
