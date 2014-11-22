@@ -1,5 +1,5 @@
 $(function () {
-    var ratio  = 853 / 430,
+    var ratio  = 852 / 480,
         $video = $('#video'),
         sizeVideo;
 
