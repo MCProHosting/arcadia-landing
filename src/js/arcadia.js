@@ -39,6 +39,11 @@ $(function () {
         var delta = target - Date.now(),
             parts = [];
 
+        if (delta < 0) {
+            location.reload();
+            return;
+        }
+
         var multipliers = [
             1000 * 60 * 60 * 24,
             1000 * 60 * 60,
@@ -50,7 +55,7 @@ $(function () {
         while (multipliers.length > 0) {
             var r = ~~(delta / multipliers[0]);
             delta -= r * multipliers.shift();
-            parts.push('' + r);
+            parts.push('' + Math.max(0, r));
         }
 
         var out = parts.map(function (p) {
