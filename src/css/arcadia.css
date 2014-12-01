@@ -94,6 +94,11 @@ h1 {
     100% { transform: translateY(80px); }
 }
 
+.countdown {
+    height: 82px;
+    margin-top: 30px;
+}
+
 .countdown > div {
     float: left;
     width: 25%;
@@ -102,7 +107,6 @@ h1 {
     text-align: center;
     position: relative;
     height: 82px;
-    margin: 30px 0;
     overflow: hidden;
 }
 
@@ -131,4 +135,13 @@ h1 {
 
 .countdown span.out {
     animation: slide-out 0.5s;
+}
+
+h4 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 15px 0;
+    font-weight: 300;
+    font-size: 0.5em;
 }
