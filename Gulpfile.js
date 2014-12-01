@@ -19,6 +19,7 @@ gulp.task('css', function() {
 });
 gulp.task('js', function () {
     gulp.src(globs.js)
+        .pipe($.coffee())
         .pipe($.if(isProduction, $.uglify()))
         .pipe(gulp.dest('dist/js'));
 });
