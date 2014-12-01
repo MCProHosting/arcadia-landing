@@ -46,7 +46,7 @@ $ ->
             # Find the type we'll look at
             $type = $ '.' + type, $countdown
             # And get the current time in that element
-            $first = $ $type.find('span').get(0)
+            $children = $type.find('span')
 
             # Some quick calculation, based on the multiplier, to determine
             # the number to display.
@@ -59,14 +59,14 @@ $ ->
                 part = '0' + part
 
             # If the number is the same as what's already there, do nothing
-            if $first.html() is part
+            if $($children.get(0)).html() is part
                 continue
 
             # Otherwise append our new number and remove the old number
             # after a moment.
             $type.append $('<span />').html part
-            $first.addClass('out')
-            do ($first) -> setTimeout $first.remove.bind($first), 500
+            $children.addClass('out')
+            do ($children) -> setTimeout $children.remove.bind($children), 500
 
 
     setInterval updateCountDown, 1000
