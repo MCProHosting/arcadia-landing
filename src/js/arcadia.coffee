@@ -23,7 +23,7 @@ $ ->
     sizeVideo()
 
     $countdown = $ '.countdown'
-    target = 1418241600000
+    target = 0
 
     updateCountDown = ->
         delta = target - Date.now()
@@ -31,7 +31,7 @@ $ ->
 
         # If it's here, refresh!
         if delta < 0
-            setTimeout location.reload(), 1000 * 10
+            setTimeout location.reload, 1000 * 10
             return
 
         # List of all parts we'll find
@@ -68,6 +68,7 @@ $ ->
             $children.addClass('out')
             do ($children) -> setTimeout $children.remove.bind($children), 500
 
-
-    setInterval updateCountDown, 1000
-    updateCountDown()
+    $.get 'time.php', (response) ->
+        target = Date.now() + parseInt(response, 10) * 1000
+        setInterval updateCountDown, 1000
+        updateCountDown()
